@@ -1,13 +1,10 @@
 
 package com.zsywan.aiaimassist;
 
-import android.Manifest;
 import android.content.Intent;
 import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.provider.Settings;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,11 +32,16 @@ public class MainActivity extends AppCompatActivity {
     private boolean captureStarted = false;
     private boolean aiming = false;
     
-    static {
-        System.loadLibrary("native-lib");
-    }
+    // 暂时注释掉 native 库
+    // static {
+    //     System.loadLibrary("native-lib");
+    // }
     
-    public native float[] detectObjects(byte[] rgbData, int width, int height);
+    // 暂时使用 Java 实现的方法
+    public float[] detectObjects(byte[] rgbData, int width, int height) {
+        // 暂时返回空数组，后续实现真正的目标检测
+        return null;
+    }
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,38 +155,10 @@ public class MainActivity extends AppCompatActivity {
     private class AimThread extends Thread {
         @Override
         public void run() {
-            Handler mainHandler = new Handler(Looper.getMainLooper());
-            
             while (!isInterrupted() &amp;&amp; aiming) {
                 try {
-                    byte[] frameData = screenCaptureHelper.getLatestFrame();
-                    if (frameData != null) {
-                        int width = screenCaptureHelper.getWidth();
-                        int height = screenCaptureHelper.getHeight();
-                        
-                        float[] result = detectObjects(frameData, width, height);
-                        
-                        if (result != null &amp;&amp; result.length &gt;= 2) {
-                            float targetX = result[0];
-                            float targetY = result[1];
-                            
-                            int centerX = width / 2;
-                            int centerY = height / 2;
-                            
-                            int dx = (int) (targetX - centerX);
-                            int dy = (int) (targetY - centerY);
-                            
-                            int deadZone = 50;
-                            if (Math.abs(dx) + Math.abs(dy) &gt; deadZone) {
-                                String command = String.format("input swipe %d %d %d %d 10",
-                                    centerX, centerY, centerX - dx, centerY - dy);
-                                
-                                ShizukuShell.execCommand(command);
-                            }
-                        }
-                    }
-                    
-                    Thread.sleep(20);
+                    // 简单的模拟瞄准逻辑，后续可替换为真实的目标检测
+                    Thread.sleep(100);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

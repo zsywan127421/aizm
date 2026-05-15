@@ -1,0 +1,9 @@
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;data-extraction-rules&gt;
+    &lt;cloud-backup&gt;
+        &lt;include domain="sharedpref" path="."/&gt;
+        &lt;exclude domain="sharedpref" path="device.xml"/&gt;
+    &lt;/cloud-backup&gt;
+&lt;/data-extraction-rules&gt;
+

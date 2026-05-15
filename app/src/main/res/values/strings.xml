@@ -1,0 +1,15 @@
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;resources&gt;
+    &lt;string name="app_name"&gt;AI自瞄助手&lt;/string&gt;
+    &lt;string name="authorize_shizuku"&gt;授权 Shizuku&lt;/string&gt;
+    &lt;string name="start_capture"&gt;启动屏幕捕获&lt;/string&gt;
+    &lt;string name="start_aim"&gt;开始自瞄&lt;/string&gt;
+    &lt;string name="stop_aim"&gt;停止自瞄&lt;/string&gt;
+    &lt;string name="shizuku_not_installed"&gt;请先安装 Shizuku 应用&lt;/string&gt;
+    &lt;string name="shizuku_not_authorized"&gt;请先授权 Shizuku&lt;/string&gt;
+    &lt;string name="capture_not_started"&gt;请先启动屏幕捕获&lt;/string&gt;
+    &lt;string name="aiming_started"&gt;自瞄已开始&lt;/string&gt;
+    &lt;string name="aiming_stopped"&gt;自瞄已停止&lt;/string&gt;
+&lt;/resources&gt;
+

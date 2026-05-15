@@ -1,0 +1,54 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Android
+android/.gradle
+android/build
+android/.idea
+android/.DS_Store
+android/captures
+android/.cxx
+android/local.properties
+android/*/build
+android/app/build
+android/app/.gradle
+android/app/.idea
+
+# Capacitor
+node_modules
+.gradle
+build
+.DS_Store
+app/.gradle
+app/build
+.gradle/
+.idea/
+*.iml
+
+# iOS
+ios/App/Pods
+ios/App/build
+ios/App/Pods/*
+ios/App/.DS_Store

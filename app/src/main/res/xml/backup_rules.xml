@@ -1,0 +1,7 @@
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;full-backup-content&gt;
+    &lt;include domain="sharedpref" path="."/&gt;
+    &lt;exclude domain="sharedpref" path="device.xml"/&gt;
+&lt;/full-backup-content&gt;
+

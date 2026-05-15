@@ -1,0 +1,55 @@
+name: Create Release (Web)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci || npm install
+      
+    - name: Build web app
+      run: npm run build
+      
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: v1.0.0
+        name: Release v1.0.0
+        body: |
+          🎵 **音乐创作大师 v1.0.0** - 源码发布
+          
+          ## 📋 功能特性
+          - 旋律编辑器：手动输入或AI生成旋律
+          - 和弦走向编辑器：手动配置或AI生成和弦
+          - 曲子生成器：一键生成完整歌曲
+          - 播放控制：音频播放、音量调节
+          - 多种风格：流行、古典、爵士、电子
+          
+          ## 🔧 技术栈
+          - React 18 + TypeScript
+          - TailwindCSS 3
+          - Web Audio API
+          - Capacitor
+          - Zustand
+          
+          ## 🚀 使用方式
+          1. `npm install`
+          2. `npm run dev`（开发）或 `npm run build`（构建）
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,14 @@
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;resources&gt;
+    &lt;style name="Theme.AIAimAssist" parent="Theme.MaterialComponents.DayNight.DarkActionBar"&gt;
+        &lt;item name="colorPrimary"&gt;@color/purple_500&lt;/item&gt;
+        &lt;item name="colorPrimaryVariant"&gt;@color/purple_700&lt;/item&gt;
+        &lt;item name="colorOnPrimary"&gt;@color/white&lt;/item&gt;
+        &lt;item name="colorSecondary"&gt;@color/teal_200&lt;/item&gt;
+        &lt;item name="colorSecondaryVariant"&gt;@color/teal_700&lt;/item&gt;
+        &lt;item name="colorOnSecondary"&gt;@color/black&lt;/item&gt;
+        &lt;item name="android:statusBarColor"&gt;?attr/colorPrimaryVariant&lt;/item&gt;
+    &lt;/style&gt;
+&lt;/resources&gt;
+

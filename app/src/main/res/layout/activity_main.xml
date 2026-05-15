@@ -1,0 +1,56 @@
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"&gt;
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" /&gt;
+
+    &lt;Button
+        android:id="@+id/btn_authorize_shizuku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/authorize_shizuku"
+        android:layout_marginBottom="16dp" /&gt;
+
+    &lt;Button
+        android:id="@+id/btn_start_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_capture"
+        android:layout_marginBottom="16dp" /&gt;
+
+    &lt;Button
+        android:id="@+id/btn_start_aim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_aim"
+        android:layout_marginBottom="16dp"
+        android:enabled="false" /&gt;
+
+    &lt;Button
+        android:id="@+id/btn_stop_aim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_aim"
+        android:enabled="false" /&gt;
+
+    &lt;TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="状态：未启动"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" /&gt;
+
+&lt;/LinearLayout&gt;
+

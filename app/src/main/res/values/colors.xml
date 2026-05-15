@@ -1,0 +1,12 @@
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;resources&gt;
+    &lt;color name="purple_200"&gt;#FFBB86FC&lt;/color&gt;
+    &lt;color name="purple_500"&gt;#FF6200EE&lt;/color&gt;
+    &lt;color name="purple_700"&gt;#FF3700B3&lt;/color&gt;
+    &lt;color name="teal_200"&gt;#FF03DAC5&lt;/color&gt;
+    &lt;color name="teal_700"&gt;#FF018786&lt;/color&gt;
+    &lt;color name="black"&gt;#FF000000&lt;/color&gt;
+    &lt;color name="white"&gt;#FFFFFFFF&lt;/color&gt;
+&lt;/resources&gt;
+

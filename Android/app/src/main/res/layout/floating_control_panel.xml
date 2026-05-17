@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#16213E"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: Ready"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_record"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start Recording"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_toggle_aim"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auto-aim: OFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FPS: 0"
+            android:textColor="#E0E0E0"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_inference_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inference: 0ms"
+            android:textColor="#E0E0E0"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dead Zone: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/tv_deadzone_value"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="50px"
+                    android:textColor="#E0E0E0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/seek_deadzone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="200" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swipe Duration: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/tv_swipe_duration_value"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="50ms"
+                    android:textColor="#E0E0E0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/seek_swipe_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="95" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intensity: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/tv_aim_intensity_value"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:textColor="#E0E0E0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/seek_aim_intensity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Input Size: "
+                android:textColor="#FFFFFF"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/tv_input_size_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="640 (HD)"
+                android:textColor="#E0E0E0"
+                android:textSize="12sp" />
+            <SeekBar
+                android:id="@+id/seek_input_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="3" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chk_show_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Detection Boxes"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/chk_target_teammate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target Teammate"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/chk_head_aim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Head Aim"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:checked="true" />
+
+    </LinearLayout>
+</ScrollView>

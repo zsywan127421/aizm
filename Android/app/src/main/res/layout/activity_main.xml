@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="#1A1A2E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI Aim Assist"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="#E0E0E0"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="#16213E" />
+
+    <Button
+        android:id="@+id/btn_shizuku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shizuku: Authorize"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_floating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Floating Window"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App Settings"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

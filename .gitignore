@@ -24,31 +24,24 @@ dist-ssr
 *.sw?
 
 # Android
-android/.gradle
-android/build
-android/.idea
-android/.DS_Store
-android/captures
-android/.cxx
-android/local.properties
-android/*/build
-android/app/build
-android/app/.gradle
-android/app/.idea
-
-# Capacitor
-node_modules
-.gradle
-build
-.DS_Store
-app/.gradle
-app/build
-.gradle/
-.idea/
 *.iml
+.gradle
+local.properties
+/.idea
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/deploymentTargetDropDown.xml
+/.idea/render.experimental.xml
+.DS_Store
+/build
+/captures
 
-# iOS
-ios/App/Pods
-ios/App/build
-ios/App/Pods/*
-ios/App/.DS_Store
+# Native build
+.cxx
+*.so
+
+# APK files
+*.apk
+*.aab
